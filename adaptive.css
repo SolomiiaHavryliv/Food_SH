@@ -1,0 +1,860 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Висота на всю сторінку */
+}
+
+.team {
+    flex: 1;
+    /* Забезпечує, що секція Команда займе весь доступний простір */
+}
+
+.team .team_box {
+    padding: 10px;
+    /* Зменште відступи */
+}
+
+.team {
+    min-height: calc(90vh - 50px);
+    /* Врахуйте висоту футера */
+    margin-bottom: 50px;
+    /* Відступ для футера */
+}
+
+/* Медіа запити */
+@media screen and (max-width: 1300px) {
+    .main_image {
+        position: relative;
+        width: 100%;
+        /* Фото займає всю ширину */
+        height: auto;
+        /* Висота автоматично підлаштовується */
+    }
+
+    .men_text,
+    .main_btn {
+        position: relative;
+        /* Вирівнювання з overlay */
+        z-index: 2;
+        /* Вище підкладки */
+        text-align: left;
+        /* Вирівнювання зліва */
+        padding: 110px;
+        /* Відступи для тексту */
+    }
+
+    .main_image {
+        position: relative;
+        width: 100%;
+        /* Фото займає всю ширину */
+        height: auto;
+        /* Висота автоматично підлаштовується */
+    }
+
+    .men_text,
+    .main_btn {
+        position: relative;
+        /* Вирівнювання з overlay */
+        z-index: 2;
+        /* Вище підкладки */
+        text-align: left;
+        /* Вирівнювання зліва */
+        padding: 110px;
+        /* Відступи для тексту */
+    }
+
+    section p {
+        width: 50%;
+        /* Встановлюємо ширину на 50% */
+        text-align: left;
+        /* Вирівнюємо текст по лівому краю */
+        position: relative;
+        line-height: 22px;
+    }
+
+    .about {
+        position: relative;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .about .about_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .about .about_main .image {
+        position: relative;
+        width: 100%;
+    }
+
+    .about .about_main .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about .about_main .image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.6);
+        z-index: 1;
+    }
+
+    .about .about_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 20px;
+        z-index: 2;
+        color: #000;
+    }
+
+    .about .about_btn {
+        display: inline-block;
+        text-align: center;
+        background: #fac031;
+        color: #fff;
+        padding: 10px 10px;
+        margin-bottom: 200px;
+        z-index: 3;
+        /* Вищий z-index, щоб бути над зображенням */
+        margin-top: 20px;
+        /* Відступ зверху для кнопки */
+        position: absolute;
+        /* Зміна на absolute */
+        left: 50%;
+        /* Центрування по горизонталі */
+        transform: translate(-50%, -50%);
+        /* Центрування кнопки */
+    }
+
+    .menu .menu_box {
+        grid-template-columns: repeat(3, 1fr);
+        /* Три стовпці */
+    }
+
+    .menu h1 {
+        font-size: 50px;
+        /* Зменшуємо розмір заголовка */
+    }
+
+    .order .order_main {
+        flex-direction: column;
+        /* Вертикальне вирівнювання */
+        align-items: center;
+        /* Центруємо вміст */
+    }
+
+    .order .order_main .order_image img {
+        width: 100%;
+        /* Ширина зображення на 100% */
+        max-width: 500px;
+        /* Максимальна ширина */
+    }
+
+    .order h1 {
+        font-size: 50px;
+        /* Зменшення розміру заголовка */
+    }
+
+    .order {
+        background-image: none;
+        /* Зникнення фону */
+        background-color: white;
+        /* Білий фон */
+    }
+
+    .order .order_main .order_image {
+        display: none;
+        /* Сховати зображення */
+    }
+
+    .team {
+        background-image: none;
+        /* Зникнення фону */
+        background-color: white;
+        /* Білий фон */
+    }
+
+    .team .team_box {
+        top: 10%;
+        /* Зменшення відступу зверху */
+    }
+
+    footer {
+        padding: 20px 0 0 15px;
+        /* Зменшення відступів */
+    }
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .men_text h1 {
+        font-size: 40px;
+        /* Зменшення заголовка */
+    }
+
+    .order h1 {
+        font-size: 50px;
+        /* Зменшення заголовка */
+    }
+
+    .team h1 {
+        font-size: 50px;
+        /* Зменшення заголовка */
+    }
+
+    footer .footer_main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* Зменшення кількості колонок */
+    }
+}
+
+@media (max-width: 1150px) {
+
+    .about .about_btn {
+        margin-bottom: 100px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .men_text h1 {
+        font-size: 36px;
+    }
+
+    .menu .menu_box {
+        grid-template-columns: repeat(2, 1fr);
+        /* Два стовпці */
+    }
+
+    .menu h1 {
+        font-size: 45px;
+        /* Зменшуємо розмір заголовка */
+    }
+
+    .order_main {
+        flex-direction: column;
+        /* Вертикальне вирівнювання */
+        align-items: center;
+        /* Центрування */
+    }
+
+    .order .order_main form {
+        width: 100%;
+        /* Форма на всю ширину */
+        padding: 20px;
+        /* Внутрішні відступи */
+    }
+
+    .team .team_box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Два контейнери в ряд */
+        grid-gap: 20px;
+        /* Відстань між контейнерами */
+    }
+
+    footer .footer_main {
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Зменшення колонок до трьох */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 28px;
+        /* Зменшення шрифту заголовка */
+    }
+
+}
+
+
+@media (min-width: 1001px) {
+    .hamburger-menu {
+        display: none;
+        /* Сховати бургер-меню при ширині більше 1000px */
+    }
+
+    .desktop-menu {
+        display: flex;
+        /* Показати звичайне меню */
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .men_text h1 {
+        font-size: 30px;
+    }
+
+    section p {
+        font-size: 15px;
+        /* Зменшення шрифту опису */
+        width: 50%;
+    }
+
+    .main_btn {
+        margin-top: -20px;
+
+    }
+
+    .desktop-menu {
+        display: none;
+        /* Сховати звичайне меню при ширині 1000px і нижче */
+    }
+
+    .hamburger-menu {
+        display: block;
+        /* Показати бургер-меню */
+    }
+
+    .order h1 {
+        font-size: 45px;
+        /* Додаткове зменшення заголовка */
+    }
+
+    .order .order_main form .input input {
+        width: 100%;
+        /* Ширина полів вводу 100% */
+    }
+
+    .order .order_main form {
+        grid-template-columns: 1fr;
+        /* Одноколонна сітка */
+    }
+
+    footer .footer_main {
+        grid-template-columns: 1fr 1fr;
+        /* Зменшення колонок до двох */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .men_text h1 {
+        font-size: 28px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .order h1 {
+        font-size: 40px;
+        /* Зменшення заголовка */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 26px;
+        /* Додаткове зменшення шрифту заголовка */
+    }
+}
+
+
+@media (max-width: 860px) {
+
+    .about .about_btn {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .men_text h1 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 13px;
+    }
+
+    .menu .menu_box {
+        grid-template-columns: 1fr;
+        /* Один стовпець */
+    }
+
+    .menu h1 {
+        font-size: 40px;
+        /* Зменшуємо розмір заголовка */
+        text-align: center;
+        /* Вирівнюємо заголовок по центру */
+    }
+
+    .menu .menu_box .menu_card {
+        width: 90%;
+        /* Ширина карток на малих екранах */
+        margin: 0 auto;
+        /* Центруємо картки */
+    }
+
+    .menu .menu_box .menu_card .menu_info h2 {
+        font-size: 22px;
+        /* Зменшуємо розмір заголовка картки */
+    }
+
+    .menu .menu_box .menu_card .menu_info p {
+        font-size: 14px;
+        /* Зменшуємо розмір опису */
+    }
+
+    .menu .menu_box .menu_card .menu_info h3 {
+        font-size: 18px;
+        /* Зменшуємо розмір ціни */
+    }
+
+    .menu .menu_box .menu_card .menu_info .menu_btn {
+        margin: 0 20px;
+        /* Відступи кнопки */
+        padding: 10px;
+        /* Відступи всередині кнопки */
+    }
+
+    .order .order_main form {
+        grid-template-columns: 1fr;
+        /* Один стовпець для форм */
+    }
+
+    .order .order_main form .input input {
+        width: 90%;
+        /* Ширина полів введення */
+    }
+
+    .order .order_main form .order_btn {
+        width: 80%;
+        /* Ширина кнопки */
+    }
+
+    .order h1 {
+        font-size: 45px;
+        /* Зменшення розміру заголовка */
+    }
+
+    .order .order_main form .input input {
+        height: 30px;
+        /* Зменшення висоти полів вводу */
+    }
+
+    .order .order_main form {
+        padding: 10px;
+        /* Зменшення відступів */
+    }
+
+    footer .footer_main {
+        grid-template-columns: 1fr;
+        /* Вирівнювання в одну колонку */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 24px;
+        /* Подальше зменшення заголовка */
+    }
+}
+
+
+@media (max-width: 720px) {
+    .about .about_text {
+        padding: 10px;
+        max-width: 90%;
+        /* Максимальна ширина */
+        margin: 0 auto;
+        /* Центрування */
+        box-sizing: border-box;
+        /* Включає padding у ширину */
+    }
+
+    .about .about_text p {
+        max-width: 100%;
+        /* Задаємо 100% ширини */
+        overflow-wrap: break-word;
+        /* Перенос слів */
+        word-break: break-word;
+        /* Зламування слів */
+        margin: 0;
+        /* Скидаємо всі зовнішні відступи */
+        padding: 0 5px;
+        /* Додаємо невеликі відступи зліва і справа */
+    }
+
+    .about .about_btn {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .men_text h1 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 12px;
+    }
+
+    .order h1 {
+        font-size: 35px;
+        /* Зменшення заголовка */
+    }
+
+    .team .team_box {
+        grid-template-columns: 1fr;
+        /* Один контейнер в ряд */
+        justify-items: center;
+        /* Центрування блоків */
+        text-align: center;
+        /* Центрування тексту */
+    }
+
+    .team h1 {
+        font-size: 45px;
+        /* Зменшення заголовка */
+    }
+
+    footer {
+        padding: 15px 0 0 10px;
+        /* Зменшення відступів */
+    }
+}
+
+@media (max-width: 650px) {
+
+    .about .about_btn {
+        margin-bottom: 0px;
+    }
+
+}
+
+@media (max-width: 612px) {
+
+    .about .about_btn {
+        margin-bottom: -20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .men_text h1 {
+        margin-top: -60px;
+        font-size: 20px;
+    }
+
+    section p {
+        margin-top: -20px;
+    }
+
+    .main_btn {
+        margin-top: -50px;
+    }
+
+    .about .about_text h1 {
+        font-size: 30px;
+        /* Зменшення шрифту заголовка */
+    }
+
+    .about .about_text h3 {
+        font-size: 20px;
+        /* Зменшення шрифту підзаголовка */
+    }
+
+    .about .about_text p {
+        font-size: 14px;
+        /* Зменшення шрифту опису */
+        padding: 0 10px;
+        /* Відступи зліва і справа */
+        max-width: 100%;
+        /* Дозволяє 100% ширини */
+        margin: 0 auto;
+        /* Центрування */
+    }
+
+    .order h1 {
+        font-size: 30px;
+        /* Зменшення заголовка */
+    }
+
+    .team .team_box .profile {
+        width: 240px;
+        /* Зменшення ширини профілю */
+        height: 240px;
+        /* Зменшення висоти профілю */
+    }
+
+    .team .team_box .profile img {
+        width: 200px;
+        /* Зменшення розміру зображення */
+        height: 200px;
+        /* Зменшення розміру зображення */
+    }
+
+    footer .footer_main .footer_tag p {
+        font-size: 14px;
+        /* Зменшення шрифту опису */
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .about .about_btn {
+        margin-bottom: -60px;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .men_text h1 {
+        font-size: 18px;
+    }
+
+    section p {
+        margin-top: -50px;
+    }
+
+    .order .order_main form .input input {
+        font-size: 14px;
+        /* Зменшення шрифту полів вводу */
+    }
+
+    .team .team_box .profile .info .name {
+        font-size: 16px;
+        /* Зменшення шрифту імені */
+    }
+
+    .team .team_box .profile .info .bio {
+        font-size: 14px;
+        /* Зменшення шрифту опису */
+    }
+
+    footer .footer_main .footer_tag i {
+        font-size: 20px;
+        /* Зменшення розміру іконок */
+    }
+}
+
+@media (max-width: 500px) {
+
+    .about .about_btn {
+        margin-bottom: -90px;
+    }
+
+    .menu h1 {
+        font-size: 35px;
+        /* Зменшуємо розмір заголовка */
+    }
+
+    .menu .menu_box .menu_card {
+        height: auto;
+        /* Автоматична висота карток */
+    }
+
+    .menu .menu_box .menu_card .menu_image {
+        height: 200px;
+        /* Висота зображення */
+    }
+
+    .menu .menu_box .menu_card .small_card {
+        top: -160px;
+        /* Регулюємо позицію серця */
+    }
+
+    .order h1 {
+        font-size: 35px;
+        /* Зменшення розміру заголовка */
+    }
+
+    .order .order_main .order_image img {
+        max-width: 300px;
+        /* Максимальна ширина зображення */
+    }
+
+    .order .order_main form .input input {
+        height: 30px;
+        /* Зменшення висоти полів введення */
+    }
+
+    .order .order_main form .order_btn {
+        padding: 8px 0;
+        /* Зменшення відступів кнопки */
+    }
+
+    .order .order_main form .order_btn {
+        width: 100%;
+        /* Кнопка на всю ширину */
+        padding: 10px;
+        /* Зменшення відступів кнопки */
+    }
+    
+    .team .team_box .profile {
+        width: 220px;
+        /* Зменшення ширини профілю */
+        height: 220px;
+        /* Зменшення висоти профілю */
+    }
+
+    .team .team_box .profile img {
+        width: 180px;
+        /* Зменшення розміру зображення */
+        height: 180px;
+        /* Зменшення розміру зображення */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 22px;
+        /* Зменшення шрифту заголовка */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about .about_text p {
+        font-size: 12px;
+        /* Подальше зменшення опису */
+    }
+
+    .about .about_btn {
+        padding: 8px 15px;
+        /* Менші відступи кнопки */
+        margin: 0 auto;
+        /* Центрування кнопки */
+        display: block;
+        /* Переключення на блочний елемент для центрування */
+        margin-bottom: -100px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .men_text h1 {
+        margin-top: -90px;
+        font-size: 16px;
+    }
+
+    section p {
+        margin-top: -90px;
+    }
+
+    .order h1 {
+        font-size: 25px;
+        /* Зменшення заголовка */
+    }
+
+    .team h1 {
+        font-size: 25px;
+        /* Зменшення заголовка */
+    }
+
+    footer {
+        padding: 10px 0 0 5px;
+        /* Зменшення відступів */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .men_text h1 {
+        font-size: 16px;
+        margin-top: -150px;
+        margin-left: 0px;
+    }
+
+    section p {
+        font-size: 12px;
+        margin-top: -150px;
+        margin-left: -30px;
+    }
+
+    .men_text,
+    .main_btn {
+        padding: -50px;
+        margin-left: -30px;
+    }
+
+    .order .order_main form .input input {
+        padding: 5px;
+        /* Зменшення внутрішніх відступів полів */
+    }
+
+    .team .team_box .profile .info {
+        top: 50%;
+        /* Зміщення інформації */
+    }
+
+    footer .footer_main .footer_tag p {
+        margin: 5px 0;
+        /* Зменшення відступів між текстом */
+    }
+}
+
+@media (max-width: 390px) {
+    .about .about_text p {
+        font-size: 12px;
+        /* Подальше зменшення опису */
+    }
+
+    .about .about_btn {
+        padding: 3px 8px;
+        /* Менші відступи кнопки */
+        margin: 0 auto;
+        /* Центрування кнопки */
+        display: block;
+        /* Переключення на блочний елемент для центрування */
+        margin-bottom: -120px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .men_text h1 {
+        font-size: 12px;
+    }
+
+    section p {
+        font-size: 10px;
+    }
+
+    .about .about_text h1 {
+        font-size: 25px;
+        /* Подальше зменшення заголовка */
+    }
+
+    .about .about_text h3 {
+        font-size: 18px;
+        /* Подальше зменшення підзаголовка */
+    }
+
+    .about .about_text p {
+        font-size: 10px;
+        /* Подальше зменшення опису */
+    }
+
+    .order h1 {
+        font-size: 20px;
+        /* Подальше зменшення заголовка */
+    }
+
+    .team h1 {
+        font-size: 20px;
+        /* Подальше зменшення заголовка */
+    }
+
+    footer .footer_main .footer_tag h2 {
+        font-size: 20px;
+        /* Додаткове зменшення заголовка */
+    }
+
+    footer .footer_main .footer_tag p {
+        font-size: 12px;
+        /* Додаткове зменшення шрифту опису */
+    }
+}
+
+
